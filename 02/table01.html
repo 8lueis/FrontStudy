@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 기본 값 확인</title>
+    <style>
+        *{padding: 0; margin: 0;}
+        table{
+            border-collapse: collapse;
+            width: 80%;
+            height: 300px;
+            margin: 100px auto;
+            border: 2px solid #000;
+            /* 기본 값 -> display: table  */
+            /* => table을 만들어 주는 성격 */
+            /* box-sizing:border-box(padding, border 폭안으로 표현) */
+        }
+        td{
+            border: 1px solid #000;
+            /* td: 일정한 폭이 생성됨, 수직상 중앙 정렬이 됨*/
+            /* 기본 값
+                display: table-cell 
+                vertical-align: middle*/
+                text-align: center;
+        }
+
+        /* table을 사용하지 않고 table을 만들기 -> 번거로움 */
+        /* dispaly:table로 변환 > 부모박스(height) */
+        div{
+            /* table과 같은 값 */
+            width: 80%;
+            height: 300px;
+            margin: 100px auto;
+            border: 2px solid #000;
+            /* 추가 */
+            display: table;
+        }
+        p{
+            /* 일반 박스 상태 */
+            /* float: left;
+            border: 1px solid #000;
+            text-align: center;
+            width: 50%;
+            /* "테두리와 안쪽 여백"의 크기도 요소의 크기로 고려 */
+            /* box-sizing: border-box; */
+            /* 감싸고 있는 div의 높이와 동일하게 */
+            /* line-height: 300px; */ 
+            display: table-cell;
+            border: 1px solid #000;
+            text-align: center;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <!-- table의 기본 값으로 표현된 모습을 div에 적용시키기  -->
+
+    <!-- table 표를 만드는 태그 -->
+    <table>
+        <tr>
+            <td>table test<br>table-test<br>table-test</td>
+            <td>table test<br>table-test<br>table-test</td>
+        </tr>
+    </table>
+
+    <!-- 차이점: 텍스트가 중앙정렬 되면 되는데 칸이 같이 생성됨 -->
+    <!-- div, p style 값에 display 속성 & p에 vertical-align: middle 추가-->
+    <div>
+        <p>
+            table-display<br>table-display<br>table-display
+        </p>
+        <p>
+            table-display<br>table-display<br>table-display
+        </p>
+    </div>
+</body>
+</html>

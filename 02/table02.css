@@ -1,0 +1,67 @@
+*{padding: 0; margin: 0;}
+
+/* table 기본 값
+> display: table 
+- border-spacing: 2px
+
+> display: table-cell
+- td의 성격 / 자동으로 폭을 분배
+- 수직상 중앙 정렬 가능 
+
+> display: table-row
+- tr의 성격 
+*/
+
+main{
+    height: 80vh;
+    width: 100%;
+    background-color: rgb(240, 201, 227);
+    color: #fff;
+    font-size: 20px;
+    /* 중앙에 오도록 table 속성 추가 */
+    display: table;
+    /* 좌우 값 조정? */
+    border-spacing: 10vw;
+}
+
+div{
+    /* 자신을 감싼 main이 table의 속성을 가짐 */
+    /* 부모인 셈 -> 따라서 td의 속성 추가 */
+    display: table-cell;
+    /* 하지만 실질적으로 td가 아니기 때문에
+    수직정렬은 또 따로 잡아줘야 함 */
+    vertical-align: middle; 
+}
+
+img{
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+section{
+    /* 테이블화 */
+    display: table;
+    width: 65%;
+    height: 30vh;
+    margin: 5vh auto;
+    /* background-color: azure; */
+    /* 1. 간격을 추가할 때 - spacing 활용 */
+    border-spacing: 1vw;
+    /* 2. 표 칸의 넓이를 고정 */
+    table-layout: fixed;
+}
+
+/* 1. 간격을 추가할 때 - spacing 활용 */
+/* 2. 매우 중요한 부분 */
+/* td 칸은 내용물의 양에 따라 자동으로 넘어가서 분배됨 */
+/* table-layout:fixed => 표 칸의 넓이를 고정할지 말지의 유무 */
+article{
+    display: table-cell;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    /* 간격 잡기 */
+    padding: 2%;
+    font-size: 13px;
+}

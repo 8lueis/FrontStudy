@@ -1,0 +1,76 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100%;
+}
+
+/* px */
+/* .px{
+    width: 1000px;
+    height: 500px;
+    background-color: ghostwhite;} */
+
+
+/* percent */
+.pce {
+    width: 50%;
+    /* 높이 같은 경우에는 percent로 표현하기 어려움 */
+    /* 부모의 상속을 받아 높이를 지정하기 때문에 */
+    /* html을 100%로 변경해야 변화가 됨 */
+    height: 400px;
+    background-color: darkgrey;
+    float: left;
+}
+
+/* 두 개의 class .pce 색상 다르게 하기 */
+.pce:nth-child(2) {
+    background-color: cadetblue;
+}
+
+/* 미디어 쿼리 */
+@media screen and (max-width:1024px) {
+
+    /* 화면 사이즈를 줄였을 때 100%를 기준으로 변화를 주고자 할 때 */
+    .pce {
+        width: 100%;
+    }
+}
+
+/* vh vw */
+.vw{
+    width: 50vw;
+    height: 100vh;
+    background-color: antiquewhite;
+}
+
+@media screen and (max-width:767px) {
+    .vw{
+        width: 80vw;
+        height: 50vh;
+    }
+}
+
+/* em, rem */
+/* 기존 폰트 px: 16px */
+
+/* 16px가 기준이기 때문에 아래의 경우 변화가 없음 */
+/* .em{font-size: 1em;}
+.rem{font-size: 1rem;} */
+
+
+/* 32px */
+/* .em{font-size: 2em;} 
+.rem{font-size: 2rem;} */
+
+
+/* all에 대한 기본 폰트 값을 20으로 설정한 경우 */
+/* 기준을 설정 */
+#all{font-size: 20px;}
+
+
+.em{font-size: 2em;} 
+/* 20 * 2*/
+.rem{font-size: 1rem;}
